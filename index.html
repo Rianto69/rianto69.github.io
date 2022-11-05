@@ -564,22 +564,22 @@
                     <div class="contact__content">
                         <h3 class="contact__title">Write me your project</h3>
 
-                        <form action="" class="contact__form">
+                        <form name="contact_ntoo" action="" class="contact__form">
                             <div class="contact__form-div">
                                 <label for="" class="contact__form-tag">Name</label>
-                                <input type="text" placeholder="Insert your Name" class="contact__form-input">
+                                <input type="text" placeholder="Insert your Name" class="contact__form-input" name="nama">
                             </div>
 
                             <div class="contact__form-div">
                                 <label for="" class="contact__form-tag">Email</label>
-                                <input type="text" placeholder="insert your email" class="contact__form-input">
+                                <input type="email" placeholder="insert your email" class="contact__form-input" name="email">
                             </div>
 
                             <div class="contact__form-div contact__form-area">
                                 <label for="" class="contact__form-tag">Project</label>
-                                <textarea name="" id="" cols="30" rows="10" class="contact__form-input" placeholder="Write your project"></textarea>
+                                <textarea name="pesan" id="" cols="30" rows="10" class="contact__form-input" placeholder="Write your project"></textarea>
                             </div>
-                            <button class="button">Send Message</button>
+                            <button type="submit" class="button">Send Message</button>
                         </form>
                     </div>
                 </div>
@@ -631,5 +631,21 @@
 
         <!--=============== MAIN JS ===============-->
         <script src="assets/js/main.js"></script>
+
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbzGocESVSxlmSYliTzUO7kmyadyt6Ty4kepVZibbMmsqfxidmKFigWqAzNiP_7Vil4l/exec'
+            const form = document.forms['contact_ntoo'];
+            const alertNew = document.querySelector('alert');
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    console.log('Success!', response)
+                })
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
+
     </body>
 </html>
