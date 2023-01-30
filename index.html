@@ -16,13 +16,13 @@
         <!--=============== CSS ===============-->
         <link rel="stylesheet" href="assets/css/styles.css">
 
-        <title> Form Keluh Kesah Lele Berulah </title>
+        <title> Form Keluhan Global Loyalty Indonesia </title>
     </head>
     <body>
         <!--=============== HEADER ===============-->
         <header class="header" id="header">
             <nav class="nav container">
-                <a href="" class="nav__logo">Form Keluhan Global Loyalty Indonesia</a>
+                <a href="" class="nav__logo">PT. Global Loyalty Indonesia</a>
             </nav>
         </header>
 
@@ -84,14 +84,14 @@
 
                             <div class="contact__form-div">
                                 <label for="" class="contact__form-tag">Hostname</label>
-                                <input type="text" placeholder="insert your hostname" class="contact__form-input" name="email">
+                                <input type="text" placeholder="Insert your hostname" class="contact__form-input" name="email">
                             </div>
 
                             <div class="contact__form-div contact__form-area">
                                 <label for="" class="contact__form-tag">Issues</label>
                                 <textarea name="pesan" id="" cols="35" rows="50" class="contact__form-input" placeholder="Write your issues"></textarea>
                             </div>
-                            <button type="submit" class="button">Send Message</button>
+                            <button type="submit" class="button" onclick="myAlert()">Send Message</button>
                             <br><br>
                             <div>
                                 <h2 class="section__title">Untuk laptop yang anti-virusnya belum diperbarui harap kontak IT Support segera.</h2>
@@ -141,5 +141,9 @@
             })
           </script>
 
+        <script>function myAlert(){
+            alert("Pesan kamu sudah terkirim");
+        }
+        </script>
     </body>
 </html>
